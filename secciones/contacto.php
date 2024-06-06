@@ -66,3 +66,26 @@
         </div>
 
       </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            mostrarDatosContactoPublicado();
+        })
+
+        function mostrarDatosContactoPublicado(){
+            jQuery.ajax({
+                url: 'controllers/contactopublicado.php',
+                type: 'GET',
+                dataType: 'JSON',
+                success: function (response){
+                    let datos = response.registrocontactopublicado;
+                    console.log(datos);
+
+                }
+            }).fail(function() {
+                alert("Error");
+            });
+
+        }
+      </script>
