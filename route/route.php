@@ -5,5 +5,7 @@ class Route{
     static $mostrarDatosNosotrosPublicado = "Empresa/MostrarDatosAcercaDeNosotrosPublicado";
     // Contacto
     static $mostrarDatosContactoPublicado = "Empresa/MostrarDatosContactoPublicado";
+    //Equipo
+    static $mostrarDatosEquipo = "Empresa/MostrarDatosEquipo";
 }
 ?>

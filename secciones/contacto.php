@@ -75,7 +75,7 @@
 
         function mostrarDatosContactoPublicado(){
             jQuery.ajax({
-                url: 'controllers/contactopublicado.php',
+                url: 'controllers/mostrarcontactopublicado.php',
                 type: 'GET',
                 dataType: 'JSON',
                 success: function (response){

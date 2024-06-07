@@ -31,7 +31,7 @@
 
         function mostrarDatosNosotrosPublicado(){
             jQuery.ajax({
-                url: 'controllers/acercadenosotrospublicado.php',
+                url: 'controllers/mostraracercadenosotrospublicado.php',
                 type: 'GET',
                 dataType: 'JSON',
                 success: function (response){
