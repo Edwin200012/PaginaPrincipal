@@ -9,9 +9,11 @@
           </p>
         </div>
 
-        <div class="row">
+        <div class="row" id="equipo-container">
+          <!-- Se muestra la informacion de equipo -->
+        </div>
 
-          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+          <!-- <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -77,7 +79,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -95,7 +97,24 @@
             type: 'GET',
             dataType: 'JSON',
             success: function (response){
-              console.log("Datos Equipo: ", response.registroequipo);
+              let equipo = response.registroequipo;
+              let equipoContainer = $('#equipo-container');
+
+              equipo.forEach(function(integrante, index) {
+                let delay = (index + 1) * 100; //Incrementar delay con cada registro
+                let equipoHTML = `
+                 <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                  <h4>${integrante.nombre}</h4>
+                  <span>${integrante.puesto}</span>
+                  <p>${integrante.descripcion}</p>
+                  </div>
+                </div>
+                `;
+                equipoContainer.append(equipoHTML);
+              });
 
             }
           }).fail(function() {
