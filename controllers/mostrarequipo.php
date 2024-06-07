@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include_once("../route/route.php");
 
     class Empresa {

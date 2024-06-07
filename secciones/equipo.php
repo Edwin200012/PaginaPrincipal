@@ -85,5 +85,21 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
       <script>
-        
+        $(document).ready(function() {
+          mostrarDatosEquipo();
+        })
+
+        function mostrarDatosEquipo(){
+          jQuery.ajax({
+            url: 'controllers/mostrarequipo.php',
+            type: 'GET',
+            dataType: 'JSON',
+            success: function (response){
+              console.log("Datos Equipo: ", response.registroequipo);
+
+            }
+          }).fail(function() {
+            alert("Error");
+          });
+        }
       </script>
