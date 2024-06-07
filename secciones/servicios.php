@@ -9,7 +9,11 @@
   </p>
 </div>
 
-<div class="row">
+<div class="row" id="servicios-container">
+
+</div>
+
+<!-- <div class="row">
   <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
     <div class="icon-box">
       <div class="icon"><i class="bx bxl-dribbble"></i></div>
@@ -42,7 +46,7 @@
     </div>
   </div>
 
-</div>
+</div> -->
 
 </div>
 
@@ -59,8 +63,23 @@
       type: 'GET',
       dataType: 'JSON',
       success: function(response){
-        console.log("Datos Servicios: ", response.registroservicios);
-
+        let servicios = response.registroservicios;
+        let serviciosContainer = $('#servicios-container');
+        
+        servicios.forEach(function(servicio, index) {
+          let delay = (index +1) * 100; //Incrementar delay con cada registro
+          let servicioHTML = `
+            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="${delay}">
+              <div style="width: 330px; height: 265.8;" class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4><a href="#">${servicio.nombre}</a></h4>
+              <p>${servicio.descripcion}</p>
+              <p>$${servicio.precio} / mensual</p>
+              </div>
+            </div>
+          `;
+          serviciosContainer.append(servicioHTML);
+        });
       }
     }).fail(function() {
       alert("Error");
