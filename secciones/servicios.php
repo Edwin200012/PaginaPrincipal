@@ -45,3 +45,25 @@
 </div>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    mostrarDatosServicios();
+  })
+
+  function mostrarDatosServicios(){
+    jQuery.ajax({
+      url: 'controllers/mostrarservicios.php',
+      type: 'GET',
+      dataType: 'JSON',
+      success: function(response){
+        console.log("Datos Servicios: ", response.registroservicios);
+
+      }
+    }).fail(function() {
+      alert("Error");
+    })
+  }
+</script>
