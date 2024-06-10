@@ -34,34 +34,64 @@
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="controllers/enviardatoscontacto.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="nombre_formulario_contacto">Tu Nombre</label>
-                  <input type="text" name="nombre_formulario_contacto" class="form-control" id="nombre_formulario_contacto" required>
+          <div style="margin-left: 20%; margin-top: 1%;" class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Contáctanos</span></h5>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="correo_formulario_contacto">Tu Correo</label>
-                  <input type="email" class="form-control" name="correo_formulario_contacto" id="correo_formulario_contacto" required>
-                </div>
+
+<form action="controllers/enviardatoscontacto.php" class="row g-3 needs-validation" novalidate method="POST">
+
+<div style="width: 90%; margin-left: 5%;">
+
+
+  <div class="mb-3">
+  <div style=" margin-left: 1%;">  
+    <i class="fa-solid fa-clipboard-list" style="color: #74C0FC;"></i>
+    <label style="margin-left: .5%;" for="nombre_formulario_contacto" class="form-label">Tu Nombre</label>
+  </div>
+    <input maxlength="50" minlength="3" style="border-radius: 15px;" type="text" class="form-control" id="nombre_formulario_contacto" name="nombre_formulario_contacto" required placeholder="Tu Nombre">
+    <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+  </div>
+
+  <div class="mb-3">
+  <div style=" margin-left: 1%;">  
+    <i class="fa-solid fa-list-check" style="color: #74C0FC;"></i>
+    <label style="margin-left: .5%;" for="correo_formulario_contacto" class="form-label">Tu correo</label>
+  </div>
+    <input maxlength="255" minlength="3" style="border-radius: 15px;" type="email" class="form-control" id="correo_formulario_contacto" name="correo_formulario_contacto" required placeholder="Tu Correo">
+    <div class="invalid-feedback">Por favor, ingrese su correo.</div>
+  </div>
+
+  <div class="mb-3">
+  <div style=" margin-left: 1%;">  
+    <i class="fa-solid fa-dollar-sign" style="color: #74C0FC;"></i>
+    <label style="margin-left: .5%;" for="precio_servicios" class="form-label">Asunto</label>
+  </div>
+    <input maxlength="100" minlength="1" style="border-radius: 15px;" type="text" class="form-control" id="asunto_formulario_contacto" name="asunto_formulario_contacto" required placeholder="Asunto">
+    <div class="invalid-feedback">Por favor, ingrese el asunto.</div>
+  </div>
+
+  <div style=" margin-left: 1%;">  
+    <i class="fa-solid fa-clipboard-list" style="color: #74C0FC;"></i>
+    <label style="margin-left: .5%;" for="mensaje_formulario_contacto" class="form-label">Mensaje</label>
+  </div>
+    <textarea maxlength="50" minlength="3" style="border-radius: 15px; resize: none;" type="text" class="form-control" id="mensaje_formulario_contacto" name="mensaje_formulario_contacto" placeholder="Mensaje" rows="5" required ></textarea>
+    <div class="invalid-feedback">Por favor, ingrese el mensaje.</div>
+  </div>
+
+
+  <div style="margin-bottom: 5%;" class="text-center">
+    <button id="botonEnviarDatosContacto" style="width:300px; height:40px; border-radius: 30px; background-color: #77E6F2; color: #000807; border-color: silver;" class="btn btn-primary" type="submit">Enviar</button>
+  </div>
+  </div>
+
+  
+
+  
+</form>
               </div>
-              <div class="form-group">
-                <label for="asunto_formulario_contacto">Asunto</label>
-                <input type="text" class="form-control" name="asunto_formulario_contacto" id="asunto_formulario_contacto" required>
-              </div>
-              <div class="form-group">
-                <label for="mensaje_formulario_contacto">Mensaje</label>
-                <textarea class="form-control" name="mensaje_formulario_contacto" id="mensaje_formulario_contacto" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Cargando</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-            </form>
-          </div>
+            </div>
 
         </div>
 
