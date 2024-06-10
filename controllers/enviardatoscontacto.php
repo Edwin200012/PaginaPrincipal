@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->AltBody = strip_tags($_POST['mensaje_formulario_contacto']); // Cuerpo alternativo en texto plano
 
     $mail->send();
-    header("Location: ../index.php?mensaje=enviado");
+    header("Location: ../index.php?datoscorrectoscontacto=true");
     exit;
     } catch (Exception $e) {
         header("Location: ../index.php?datosincorrectoscontacto=true");
