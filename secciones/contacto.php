@@ -35,24 +35,24 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="controllers/enviardatoscontacto.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Tu Nombre</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <label for="nombre_formulario_contacto">Tu Nombre</label>
+                  <input type="text" name="nombre_formulario_contacto" class="form-control" id="nombre_formulario_contacto" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Tu Correo</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <label for="correo_formulario_contacto">Tu Correo</label>
+                  <input type="email" class="form-control" name="correo_formulario_contacto" id="correo_formulario_contacto" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Asunto</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <label for="asunto_formulario_contacto">Asunto</label>
+                <input type="text" class="form-control" name="asunto_formulario_contacto" id="asunto_formulario_contacto" required>
               </div>
               <div class="form-group">
-                <label for="name">Mensaje</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="mensaje_formulario_contacto">Mensaje</label>
+                <textarea class="form-control" name="mensaje_formulario_contacto" id="mensaje_formulario_contacto" rows="10" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Cargando</div>
