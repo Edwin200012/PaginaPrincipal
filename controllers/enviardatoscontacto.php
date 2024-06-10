@@ -50,10 +50,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->AltBody = strip_tags($_POST['mensaje_formulario_contacto']); // Cuerpo alternativo en texto plano
 
     $mail->send();
-    header("Location: ../index.php");
+    header("Location: ../index.php?mensaje=enviado");
     exit;
     } catch (Exception $e) {
-        echo "El mensaje no pudo ser enviado. Mailer Error: {$mail->ErrorInfo}";
+        header("Location: ../index.php?datosincorrectoscontacto=true");
+        exit;
     }
 
 }

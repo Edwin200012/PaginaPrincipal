@@ -9,6 +9,18 @@
 </head>
 
 <body>
+  
+<?php
+    // Verificar si hay un mensaje enviado en la URL
+    if(isset($_GET['mensaje']) && $_GET['mensaje'] === 'enviado') {
+
+        echo '<div class="alert alert-success alert-dismissible fade show" role="alert" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">
+                ¡Gracias! Tu mensaje ha sido enviado correctamente.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>';
+
+    }
+    ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
