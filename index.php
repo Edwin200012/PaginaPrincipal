@@ -16,14 +16,14 @@
 
   ?>
    <div style="position: fixed; margin-top:10px; margin-bottom: -5%; margin-left: 75%; border-radius: 15px; z-index: 9999;" class="toast show">
-    <div style="background-color: lightcyan; border-radius: 15px 15px 0px 0px;"  class="toast-header">
+    <div style="background-color: rgba(220, 220, 220, 0.4);; border-radius: 15px 15px 0px 0px;"  class="toast-header">
     <span class="alert-icon success-icon">&#10004;</span>
       <strong class="me-auto">Contacto</strong>
       <a href="index.php">
         <button style="font-size: 18px;" type="button" class="btn-close" data-bs-dismiss="toast"></button>
       </a>
     </div>
-    <div style="background-color: rgba(0, 255, 0, 0.5); border-radius: 0px 0px 15px 15px;" class="toast-body">
+    <div style="background-color: rgba(0, 255, 0, 0.4); border-radius: 0px 0px 15px 15px;" class="toast-body">
     <p>Datos de contacto enviados correctamente</p>
     </div>
   </div>
