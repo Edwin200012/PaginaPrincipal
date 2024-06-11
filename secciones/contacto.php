@@ -40,7 +40,7 @@
                   <h5 class="card-title">Contáctanos</span></h5>
                 </div>
 
-<form action="controllers/enviardatoscontacto.php" class="row g-3 needs-validation" novalidate method="POST">
+<form action="controllers/enviardatoscontacto.php" class="row g-3 needs-validation" require method="POST">
 
 <div style="width: 90%; margin-left: 5%;">
 
